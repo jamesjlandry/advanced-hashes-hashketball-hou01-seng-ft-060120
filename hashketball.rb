@@ -203,7 +203,7 @@ def big_shoe_rebounds
          if stats[:shoe] > biggest_feet
               biggest_feet = stats[:shoe]
           end
-         if stats[:shoe] = biggest_feet
+         if stats[:shoe] == biggest_feet
             return stats[:rebounds]
             
           end
