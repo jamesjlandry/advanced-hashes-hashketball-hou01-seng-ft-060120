@@ -184,7 +184,15 @@ def player_numbers(team)
 end
 
 def player_stats(player)
-  
+    player_info = {}
+  game_hash.each do |home_away, team_info|
+    team_info[:players].each do |stats|
+         if stats[:player_name] == player
+              total_points = stats[:points]
+              return total_points
+          end
+    end
+  end
 end
 
 def big_shoe_rebounds
