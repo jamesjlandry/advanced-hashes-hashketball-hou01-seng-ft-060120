@@ -203,10 +203,9 @@ def big_shoe_rebounds
          if stats[:shoe] > biggest_feet
               biggest_feet = stats[:shoe]
           end
-         if stats[:shoe] == biggest_feet
-            return stats[:rebounds]
-            
-          end
     end
+    team_info[:players].each do |stats|
+      if biggest_feet == stats[:shoe]
+        return stats[:rebounds]
   end
 end
